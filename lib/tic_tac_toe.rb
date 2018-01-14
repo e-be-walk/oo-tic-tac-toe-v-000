@@ -89,7 +89,7 @@ end
   end
 
   def draw
-    if won? == false $$ full? == true
+    if won? == false && full? == true
       true
     else
       false
