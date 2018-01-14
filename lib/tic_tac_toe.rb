@@ -116,5 +116,20 @@ end
     return nil
   end
 
-
+  def player
+    num_of_turns = 0
+    until over? == true || won? != false
+      turn
+      num_of_turns += 1
+    end
+    if winner == "X"
+      puts "Congratulations X!"
+    elsif winner == "O"
+      puts "Congratulations O!"
+    elsif draw? == true
+      puts "Cat's Game!"
+    else 
+      return nil
+    end
+    
 end
