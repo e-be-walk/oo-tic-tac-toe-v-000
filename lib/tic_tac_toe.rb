@@ -99,7 +99,7 @@ end
   def over?
     if won? || draw? || full?
       true
-    else 
+    else
       false
     end
   end
@@ -115,6 +115,6 @@ end
     end
     return nil
   end 
-    
+
 
 end
