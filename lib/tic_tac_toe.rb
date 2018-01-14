@@ -96,4 +96,25 @@ end
     end
   end
 
+  def over?
+    if won? || draw? || full?
+      true
+    else 
+      false
+    end
+  end
+
+  def winner
+    WIN_COMBINATIONS.each do |win_combination|
+
+      if [win_combination[0]] == "X" && [win_combination[1]] == "X" && [win_combination[2]] == "X"
+        return "X"
+      elsif [win_combination[0]] == "O" && [win_combination[1]] == "O" && [win_combination[2]] == "O"
+        return "O"
+      end
+    end
+    return nil
+  end 
+    
+
 end
