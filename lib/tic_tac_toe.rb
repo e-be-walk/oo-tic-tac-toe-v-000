@@ -88,4 +88,12 @@ end
     end
   end
 
+  def draw
+    if won? == false $$ full? == true
+      true
+    else
+      false
+    end
+  end
+
 end
