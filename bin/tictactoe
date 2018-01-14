@@ -6,4 +6,6 @@ puts "Welcome to Tic Tac Toe!"
 
 board = Array.new(9, " ")
 
-play(board)
+tic_tac_toe = TicTacToe.new
+tic_tac_toe.play
+
