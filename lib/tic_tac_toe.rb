@@ -116,7 +116,7 @@ end
     return nil
   end
 
-  def player
+  def play
     num_of_turns = 0
     until over? == true || won? != false
       turn
