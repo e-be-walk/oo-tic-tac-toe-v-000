@@ -1,6 +1,6 @@
 class TicTacToe
 
-  def initialize(board = nil)
+  def initialize(board = nil, index = nil)
     @board = board || Array.new(9, " ")
   end
 
@@ -21,15 +21,15 @@ class TicTacToe
   end
 
   def move
-    @board[index] = player_token
+    @board[@index] = player_token
   end
 
   def position_taken?
-    !(@board[index].nil? || @board[index] == " ")
+    !(@board[@index].nil? || @board[@index] == " ")
   end
 
   def valid_move?
-    index.between?(0, 8) && !position_taken?(@board, index)
+    index.between?(0, 8) && !position_taken?(@board, @index)
   end
 
   def turn_count
@@ -43,10 +43,10 @@ class TicTacToe
   def turn
     puts "Please enter 1-9:"
     input = gets.strip
-    index = input_to_index(input)
+    @index = input_to_index(input)
     player_token = current_player(@board)
-    if valid_move?(@board, index)
-      move(@board, index, player_token)
+    if valid_move?
+      move(@board, @index, player_token)
       display_board(@board)
     else
       turn(@board)
