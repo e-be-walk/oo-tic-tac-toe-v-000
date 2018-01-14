@@ -128,8 +128,8 @@ end
       puts "Congratulations O!"
     elsif draw? == true
       puts "Cat's Game!"
-    else 
+    else
       return nil
     end
-    
+  end
 end
