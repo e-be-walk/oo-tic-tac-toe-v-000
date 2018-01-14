@@ -8,4 +8,3 @@ board = Array.new(9, " ")
 
 tic_tac_toe = TicTacToe.new
 tic_tac_toe.play
-
